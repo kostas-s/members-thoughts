@@ -6,8 +6,10 @@ A web application for posting/reading other people's thoughts.
 ```ruby
   bundle install
 ```
-`<addr>`
+
 ## Features:
+* Accounts set up with `devise` gem.
+* Database uses `pg` gem.
 * Everyone can read posted thoughts.
 * Only users that have signed-in can see who actually posted the thought.
 * You can only delete your own thoughts. (Makes sense)
