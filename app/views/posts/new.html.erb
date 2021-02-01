@@ -1,0 +1,21 @@
+<div class="columns">
+  <div class="column is-half is-offset-one-quarter">
+    <div class="box">
+
+      <%= form_with(model: @post, url: posts_path, method: "post") do |f| %>
+        <div class="field">
+          <label class="title is-4 has-text-centered">What's inside your mind?</label>
+          <br/>
+          <br/>
+          <div class="control">
+            <%= f.text_area :body, class: "textarea" %>
+          </div>
+        </div>
+        <div class="column is-4 is-offset-9">
+          <%= f.submit "Post", class: "button is-warning" %>
+          <%= link_to "Back", root_url, class: "button is-dark" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

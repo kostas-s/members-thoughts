@@ -1,0 +1,33 @@
+<div class="columns">
+  <div class="column is-half is-offset-one-quarter">
+    <h1 class="title index-title is-4 has-text-centered">Members Thoughts</h1>
+    <% @posts.each do |post| %>
+      <div class="box">
+        <div class="media-content">
+          <div class="content">
+            <% if user_signed_in? %>
+              <% if current_user.id == post[:user_id] %>
+                <%= link_to post, method: :delete, class: "level-item", data: { confirm: "Are you sure you want to delete?" } do %>
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="delete is-small"></i>
+                                    </span>
+                                </span>
+                <% end %>
+              <% end %>
+            <% end %>
+            <%= post.body %>
+          </div>
+        </div>
+        <% if user_signed_in? %>
+
+          <div class="media-content">
+            <div class="content has-text-left"></div>
+            <p class="has-text-right"><em><%= post.created_at.to_formatted_s(:short) %></em> -
+              <strong><%= post.user.username %></strong></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

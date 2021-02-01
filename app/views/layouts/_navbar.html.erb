@@ -1,0 +1,34 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+
+
+    <a role="button" onclick="document.querySelector('.navbar-burger').classList.toggle('is-active');
+      document.querySelector('.navbar-menu').classList.toggle('is-active');" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Thoughts", root_path, class: "navbar-item has-text-weight-bold" %>
+
+      <%= link_to "About", about_path, class: "navbar-item" %>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <% if user_signed_in? %>
+            <%= link_to "New Thought", new_post_path, class: "button is-warning" %>
+            <%= link_to "Sign out", destroy_user_session_path, class: "button is-light" %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: "button is-warning" %>
+            <%= link_to "Log in", new_user_session_path, class: "button is-light" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
