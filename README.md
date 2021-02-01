@@ -1,5 +1,5 @@
 # Members Thoughts app
-A web application for posting/reading other people's thoughts.
+A web application for posting/reading other people's posted thoughts.
 
 ## Requirements:
 * After cloning repo, make sure to get all dependencies by running:
