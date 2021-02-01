@@ -15,8 +15,6 @@
 </html>
 
 <body>
-
-<%= render 'layouts/navbar' %>
 <% if notice %>
   <div class="notification is-warning">
     <p class="notice"><%= notice %></p></div>
@@ -25,6 +23,8 @@
   <div class="notification is-danger">
     <p class="alert"><%= alert %></p></div>
 <% end %>
+<%= render 'layouts/navbar' %>
+
 <%= yield %>
 <%= render 'layouts/footer' %>
 </body>
