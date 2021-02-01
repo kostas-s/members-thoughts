@@ -6,8 +6,7 @@ A web application for posting/reading other people's thoughts.
 ```ruby
   bundle install
 ```
-
-[test]
+`<addr>`
 ## Features:
 * Everyone can read posted thoughts.
 * Only users that have signed-in can see who actually posted the thought.
