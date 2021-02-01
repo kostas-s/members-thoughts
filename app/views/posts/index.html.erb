@@ -8,11 +8,11 @@
             <% if user_signed_in? %>
               <% if current_user.id == post[:user_id] %>
                 <%= link_to post, method: :delete, class: "level-item", data: { confirm: "Are you sure you want to delete?" } do %>
-                                <span class="icon-text">
-                                    <span class="icon">
-                                        <i class="delete is-small"></i>
-                                    </span>
-                                </span>
+
+
+                  <i class="delete is-small"></i>
+
+
                 <% end %>
               <% end %>
             <% end %>

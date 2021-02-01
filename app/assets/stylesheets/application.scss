@@ -16,9 +16,12 @@
 
 @import "bulma";
 
-body {
+:root {
   background-color: lightgrey;
-  height: 100vh;
+}
+
+body {
+  padding-bottom: 40px;
 
   .notification {
     padding: 0.5em;
@@ -36,9 +39,9 @@ body {
 }
 
 .footer {
-  padding: 20px;
+  padding: 10px;
   bottom: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: $dark;
   color: $light;
